@@ -1,0 +1,9 @@
+<form class="form-container" [formGroup]="form" autocomplete="off">
+    <label class="form-container__label" for="password">Check your password strength:</label>
+    <input class="form-container__input" id="password" type="password" formControlName="password">
+</form>
+
+<div class="password-strength password-strength_{{currentStrength}}">
+    <div *ngFor="let item of [1,2,3]"
+         class="password-strength__line password-strength__line{{item}}"></div>
+</div>
